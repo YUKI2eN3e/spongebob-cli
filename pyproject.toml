@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "spongebob-cli"
+version = "1.1.1"
+description = "Watch classic spongebob from the terminal!"
+authors = ["trakBan"]
+license = "GPL-3.0"
+readme = "README.md"
+packages = [
+	{ include = "spongebob_cli", from = "."}
+]
+
+[tool.poetry.scripts]
+spongebob-cli = "spongebob_cli.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+termcolor = "^1.1.0"
+beautifulsoup4 = "^4.11.1"
+prettytable = "^3.3.0"
+halo = "^0.0.31"
+requests = "^2.27.1"
+youtube_dl = "^2021.12.17"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
